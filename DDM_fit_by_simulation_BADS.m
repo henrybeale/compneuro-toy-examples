@@ -51,6 +51,15 @@ legend({'Data','Fitted'})
 xlabel('Signed RT'); ylabel('Density')
 title('Smoothed distributions')
 
+nexttile
+hold on 
+bar((1:4)-.1, [true_v, true_a, true_z, true_t], .2)
+bar((1:4)+.1, P, .2)
+xticks(1:4)
+xticklabels({'v','a','z','t'})
+xlabel('Parameter')
+legend({'True','Fitted'})
+
 function [signed_rt] = sim_ddm(n_trials, v,a,z,t)
 % function to simulate DDM trials (see DDM.m) 
 s = 1;
