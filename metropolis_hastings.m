@@ -2,7 +2,6 @@
 burnin = 5e2; 
 max_steps = burnin+5e3; 
 
-
 % proposal distribution 
 g = @(x) randn*1 + x;  % Norm(0,1) 
 
